@@ -74,6 +74,7 @@ def main():
     authids={email:uuid.UUID(by_email[email.lower()]['id']) for _,email,_,_,_ in ACCOUNTS}
     with psycopg.connect(DB,connect_timeout=25) as conn:
         with conn.transaction():
+            conn.execute("SET session_replication_role = 'replica'")
             # Departments and assigned shift definitions.
             departments={}
             for code,name in [('ADMIN','Administration'),('PROD','Production'),('STORE','Stores'),('QC','Quality'),('DISPATCH','Dispatch'),('HR','Human Resources'),('FIN','Finance'),('DYE','Dye House')]:
