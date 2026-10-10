@@ -1,0 +1,10 @@
+project_id = "ywymnhswzgcakwkzsnqa"
+
+[functions.phase-c-hello]
+verify_jwt = true
+
+[functions.auth-login]
+verify_jwt = false
+
+[functions.admin-users]
+verify_jwt = true

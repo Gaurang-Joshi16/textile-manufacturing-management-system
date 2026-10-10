@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  font-family: 'Hanken Grotesk', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1d2448;
+  background: #f2f4f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --ink-indigo: #14193a;
+  --indigo-700: #2a3570;
+  --warp-slate: #5b6b9a;
+  --loom-mist: #f2f4f9;
+  --weft-teal: #0e8c8a;
+  --saffron: #e3a008;
+  --madder: #b8323c;
+  --fern: #2f7d55;
+  --white: #ffffff;
+  --line: #dfe4ef;
+  --line-dark: #bac4db;
+  --ink-soft: #46527b;
+  --surface-muted: #f7f8fb;
+  --shadow-overlay: 0 18px 48px rgba(20, 25, 58, 0.16);
+}
+
+* { box-sizing: border-box; }
+html { min-width: 320px; background: var(--loom-mist); }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: .55; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid rgba(14, 140, 138, .35); outline-offset: 2px; }
+#root { min-height: 100vh; }
+::selection { background: rgba(14, 140, 138, .18); }

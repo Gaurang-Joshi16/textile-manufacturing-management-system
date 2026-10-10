@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+supabase/.env.local
+supabase/.demo-credentials.json
+supabase/.demo-story.json
+.local-backups/
+docs/FINAL_REPORT.md
+*.secrets
+playwright-report/
+test-results/
+coverage/
+.DS_Store

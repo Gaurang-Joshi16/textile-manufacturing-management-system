@@ -1,0 +1,19 @@
+-- Master records are identified by source; operational test/story records use is_demo.
+ALTER TABLE public.unit_conversions ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.process_definitions ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.product_routes ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.product_bom ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.machines ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.shifts ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.warehouses ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.stock_locations ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.defect_categories ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.downtime_reasons ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.cost_categories ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.inspection_plans ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.inspection_plan_checks ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.spare_parts ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.employee_skills ADD COLUMN IF NOT EXISTS is_demo boolean NOT NULL DEFAULT false;
+ALTER TABLE public.process_skills ADD COLUMN IF NOT EXISTS source text NOT NULL DEFAULT 'LIVE';
+ALTER TABLE public.shift_instances ADD COLUMN IF NOT EXISTS is_demo boolean NOT NULL DEFAULT false;
+ALTER TABLE public.shift_roster ADD COLUMN IF NOT EXISTS is_demo boolean NOT NULL DEFAULT false;
